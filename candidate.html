@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Candidate</title>
+    </head>
+    <body>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = $_POST['name'];
+            $id = $_POST['id'];
+            
+          
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $database = "voting";
+        
+         
+          $con = mysqli_connect($servername, $username, $password, $database);
+        
+          if (!$con) {
+              die("Sorry, we failed to connect: " . mysqli_connect_error());
+          } else {
+              echo "Connection was successful";
+          }
+        
+         
+          $sql = "INSERT INTO `vote` (`Name`, `Voter Id`) VALUES ('$name', '$id')";
+        
+          
+          $result = mysqli_query($con, $sql);
+        
+          if ($result) {
+            echo "Data inserted successfully";
+        
+          } else {
+            echo "Data not inserted successfully";
+          }
+        }
+        ?>
+        <h3 style="text-align: center;background-color: antiquewhite;"><b>Candidate Details</b></h3>
+
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Vv6mpg35ZrrOVdUUCMqoLwHaE8%26pid%3DApi&f=1&ipt=7789a4941b9f0c415e5bc995b26f1a838795e781ab35a56c52a17238e814b2a6&ipo=images" alt="Candidate photo">
+<br><br>
+<form action="submit_form.php" method="post">
+        <label for="name"><b>NAME : </b></label>
+        <input type="text" id="name" name="name"><br><br> 
+        <label for="id"><b>Voter Id : </b></label>
+        <input type="text" id="id" name="id">
+        <input type="submit">
+</form>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AdminLogin</title>
+        <style>
+            body{
+                background-image: url(v1.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-color: rgb(24, 43, 55); 
+            }
+            .container {
+                width: 300px;
+                margin: auto;
+            }
+            input[type="text"], input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            button {
+                font-family: Cursive;
+                background-color: #3c746eac;
+                color: white;
+                padding: 10px 20px;
+                border: 0cqh;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"><br><br><br><br>
+            <h2>Admin Login</h2>
+            <form action="admin_login.php" method="post">
+                <input type="text" name="admin_username" placeholder="Admin_id" required><br>
+                <input type="password" name="admin_password" placeholder="Password" required><br>
+            </form>
+            <a href="Main1.html"><button type="submit">Login</button></a>
+        </div>
+    </body>
+</html>

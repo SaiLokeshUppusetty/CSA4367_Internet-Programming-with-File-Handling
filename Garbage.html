@@ -1,0 +1,50 @@
+<!doctype>
+<html>
+    <head>
+        <title>GarbageManagementSystem</title>
+        <style>
+            body{
+                background-image: url(garbagepic.jpg);
+                text-align: center;    
+            }
+            button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            }
+            button:hover {
+            background-color: #45a049;
+        }
+        </style>
+        
+    </head>
+
+    <body>
+            
+        <hr>
+        <h1 style="text-align: center;background-color: chartreuse;"><b>Garbage Management System</b></h1><hr>
+        <p align="right"; id="demo"></p>
+            <script>
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d;
+            </script>
+            <script>
+            const d = new Date("2023-10-18");
+            document.getElementById("demo").innerHTML = d;
+            </script>
+        <h2 
+        style="padding: 1em;border: 0.5em solid black;
+        width: 4em;
+        height: 4em;
+        border-radius: 100%;">Please Login</h2><br>
+        
+        <a href="GarbageAdminLogin.html"><button>Adminstator</button></a>
+
+        <a href="GarbageUserLogin.html"><button>Public</button></a>
+
+        <a href="GarbageDriverLogin.html"><button>Driver</button></a>
+        
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GarbageUserLogin</title>
+        <style>
+            body{
+                background-image: url(cloud.jpg);
+            }
+        </style>
+    </head>
+
+    <body>
+       <hr> <h1 style="text-align: center;"><b>Welcome To Garbage Management System</b></h1><hr>
+       <p align="right"; id="demo"></p>
+            <script>
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d;
+            </script>
+            <script>
+            const d = new Date("2023-10-18");
+            document.getElementById("demo").innerHTML = d;
+            </script>
+       <h2>Please Enter Login Credentials</h2>
+       <label for="UserName">UserName : </label>
+       <input type="text" id="UserName" name="UserName" placeholder="Enter UserName Id"><br><br>
+       <label for="Password">Password : </label>
+       <input type="password" id="Password" name="password" placeholder="Enter Password">
+    </body>
+</html>
